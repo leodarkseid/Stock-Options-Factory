@@ -89,7 +89,7 @@ contract EmployeeStockOptionPlan is Ownable, ReentrancyGuard {
 
     function transferOptions(address _recipient, uint256 _stockOptionsAmount)public {
         require(_stockOptionsAmount > 0, "stock options must be greater than zero");
-        require(employee[msg.sender].stockOptions > 0, "Employee does not exist");
+        require(employee[msg.sender].stockOptions > 0 || vestingBalance[_recipient] > 0, "Employee does not exist");
         require(_stockOptionsAmount <= vestingBalance[msg.sender], "Employee has insufficient vesting balance");
 
     
