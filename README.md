@@ -5,7 +5,6 @@ A simple smart contract that allows organiZations to give out, distribute and  v
 
 # stockOptionFactory
 
-
 This Smart Contract deploys the Stock Options Plan contract and immediately transfer ownership to the Organisation Creator
 
 # Employee Stock Option Plan
